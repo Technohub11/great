@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke</title>
+</head>
+<body>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <center>
+        <h1>Vielen Dank, Ihre Bewerbung wurde angenommen.</h1>
+    </center>
+</body>
+
+<script>
+    function getGet(name) {
+        var s = window.location.search;
+        s = s.match(new RegExp(name + '=([^&=]+)'));
+        return s ? s[1] : false;
+    }
+    function haveagoodday(){ 
+    let px = getGet('px');
+     document.write('<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id='+px+'&ev=purchase&noscript=1"/>');
+    }
+    function haveaniceday(){
+        window.location.replace(getGet('url'));
+        document.location.href=getGet('url');
+    
+    }
+    haveagoodday();
+    setTimeout(haveaniceday,4000);
+    </script>
+</html>
